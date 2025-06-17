@@ -1,10 +1,11 @@
 .booking-container {
-    max-width: 800px;
-    margin: 100px auto 0 auto;
+    max-width: 900px;
+    max-height: 400px   ;
+    margin: 80px auto 0 auto;
     padding: 32px 24px;
     background: #fff;
-    border-radius: 16px;
-    box-shadow: 0 8px 32px rgba(25, 118, 210, 0.10);
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.10);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -17,40 +18,90 @@
     margin-bottom: 18px;
     letter-spacing: 1px;
 }
+.booking-subtitle {
+    font-size: 1.13rem;
+    color: #555;
+    margin-bottom: 28px;
+    text-align: center;
+    font-weight: 500;
+    opacity: 0.85;
+    width: 100%;
+    
+}
+
+.booking-btn {
+    background: #1976d2;
+    color: #fff;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 12px;
+}
+
 
 .booking-list {
     width: 100%;
-    margin-top: 24px;
+    max-width: 900px;
+    height: 420px;                /* Fixed height for visible box and scrolling */
     display: flex;
-    flex-direction: column;
-    gap: 18px;
-}
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: flex-start;
+    margin-top: 24px;
+    overflow-y: auto;             /* Only the list scrolls */
+    overflow-x: hidden;
+    padding: 24px 12px 24px 24px; /* Padding for visible border radius */
+    background: #f4f8fb;
+    border-radius: 18px;
+    box-shadow: 0 2px 12px rgba(25, 118, 210, 0.07);
+    border: 1.5px solid #e0eafc;
+      scrollbar-width: thin; /* For Firefox */
+scrollbar-color: #1976d2 #e0eafc;}
+    /* Hide scroll on body when scrolling list */
 
 .booking-card {
-    background: #f9f9f9;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(25, 118, 210, 0.08);
-    padding: 18px 20px;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 4px 16px rgba(25, 118, 210, 0.10);
+    padding: 22px 20px 18px 20px;
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 12px;
+    width: calc(33.333% - 24px); /* 3 cards per row, accounting for gap */
+    min-width: 240px;
+    max-width: 340px;
+    box-sizing: border-box;
+    border: 1px solid #e0eafc;
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+.booking-card:hover {
+    box-shadow: 0 8px 32px rgba(25, 118, 210, 0.18);
+    transform: translateY(-4px) scale(1.03);
 }
 
 .booking-hotel {
-    font-size: 1.15rem;
+    font-size: 1.18rem;
     color: #1976d2;
-    font-weight: 600;
+    font-weight: 700;
+    margin-bottom: 2px;
 }
 
 .booking-details {
     color: #444;
     font-size: 1rem;
+    margin-bottom: 2px;
 }
 
 .booking-date {
     color: #388e3c;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 1rem;
+    margin-bottom: 6px;
 }
 
 .booking-btn {
@@ -64,8 +115,9 @@
     cursor: pointer;
     transition: background 0.2s;
     margin-top: 10px;
+    align-self: flex-end;
 }
 
 .booking-btn:hover {
-    background: #1565c0;
+    background: #e21010;
 }

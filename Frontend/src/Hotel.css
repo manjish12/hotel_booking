@@ -17,10 +17,10 @@ body {
 }
 
 .hotel-title {
-    font-size: 2.2rem;
+    font-size: 2rem;
     color: #1976d2;
-    margin-bottom: 12px;
     font-weight: bold;
+    margin-bottom: 18px;
     letter-spacing: 1px;
 }
 
@@ -43,18 +43,28 @@ body {
 
 .hotel-list {
     width: 100%;
+    max-height: 300px;         /* Set a max height for vertical scrolling */
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;       /* Arrange cards in a row */
+    flex-wrap: wrap;           /* Allow wrapping to next row */
     gap: 32px;
-    justify-content: center;
+    justify-content: flex-start;
     margin-top: 24px;
+    overflow-y: scroll;        /* Enable vertical scroll */
+    overflow-x: hidden;        /* Hide horizontal scroll */
+    padding-right: 12px;       /* Optional: space for scrollbar */
+    scrollbar-color: #1976d2 #e0eafc;
+    scrollbar-width: thin;
 }
 
 .hotel-card {
     background: #f9f9f9;
     border-radius: 14px;
     box-shadow: 0 4px 16px rgba(25, 118, 210, 0.08);
-    width: 300px;
+        width: calc(33.333% - 22px); /* 3 cards per row, accounting for gap */
+        min-width: 280px;
+        max-width: 340px;
+    box-sizing: border-box;
     padding: 24px 18px 18px 18px;
     display: flex;
     flex-direction: column;
