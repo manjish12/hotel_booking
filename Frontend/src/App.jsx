@@ -7,6 +7,8 @@ import Home from './Home'
 import Hotel from './Hotel'
 import Contact from './Contact'
 import Booking from './Booking'
+import { MdOutlineLogout } from "react-icons/md";
+
 
 
 
@@ -27,7 +29,9 @@ const App = () => {
     </Routes>
 
    </div>
-  <Link to="#" style={{ position: 'fixed', bottom: '20px', right: '20px', backgroundColor: '#007bff', color: '#fff', padding: '10px 20px', borderRadius: '5px', textDecoration: 'none' }}>Logout</Link>
+  <Link to="#" style={{ position: 'fixed', bottom: '20px', right: '20px', backgroundColor: '#007bff', color: '#fff', padding: '10px 10px', borderRadius: '5px', textDecoration: 'none' }}>
+    <MdOutlineLogout size={24}/>
+  </Link>
 
 </BrowserRouter>
   )
